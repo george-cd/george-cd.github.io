@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>George Drakou — Senior Platform Engineer</title>
+<meta name="description" content="George Drakou designs and builds large real-time systems end to end: Go, C++, Linux, security, trading and payments.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<!-- Personal portfolio: shows experience and range, never how the systems are built inside.
+     No architecture, no component names, no internal numbers or settings. -->
+
+<nav class="top">
+ <a class="brand" href="#top">George Drakou</a>
+ <div class="links">
+  <a href="#skills">What I do</a>
+  <a href="#systems">Systems</a>
+  <a href="#how">How I work</a>
+  <a href="#about">Experience</a>
+  <a class="btn small" href="#contact">Contact</a>
+ </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+ <p class="eyebrow">Senior Platform Engineer · Nicosia, Cyprus · Remote</p>
+ <h1>I design and build large real-time systems,<br><span>end to end.</span></h1>
+ <p class="lead">From the Linux kernel and the network to the database, the business logic and the screen people use all day. Go, C++ and Linux, with security built in from the first line.</p>
+ <p class="stack">Go · C++ · Linux · Security · Trading · Payments · PostgreSQL · JavaScript</p>
+ <p class="cta">
+  <a class="btn" href="#systems">See what I've built</a>
+  <a class="btn ghost" href="#contact">Get in touch</a>
+ </p>
+</header>
+
+<main>
+
+<!-- ============ NUMBERS ============ -->
+<section class="numbers">
+ <div><b>20+</b><span>years building software</span></div>
+ <div><b>10</b><span>years as Head of CRM Systems at a global forex broker</span></div>
+ <div><b>7</b><span>large systems designed and built end to end</span></div>
+ <div><b>1,300+</b><span>automated tests across those systems</span></div>
+ <div><b>200+</b><span>payment provider integrations</span></div>
+</section>
+
+<!-- ============ WHAT I DO ============ -->
+<section id="skills">
+ <h2>What I do</h2>
+ <div class="grid3">
+  <div class="card tip"><p class="kicker">Go</p><h3>Back-ends that handle money</h3>
+   <p>A trading engine with real-time margin and stop-out, a payment hub, a broker CRM and a client portal. Exact money maths, full audit trails, safe retries, crash-safe records.</p></div>
+  <div class="card tip"><p class="kicker">C++ on Linux</p><h3>Real-time and low level</h3>
+   <p>A real-time server that streams live data to many thousands of users, and a security engine that works down to packet filtering inside the Linux kernel. Plain, readable C++ with no heavy dependencies.</p></div>
+  <div class="card tip"><p class="kicker">Security</p><h3>Defence in depth</h3>
+   <p>Protection from the network card to the application, its own machine-learning model per customer, signed live updates. I attack my own systems with my own pen-test toolkit and fuzzers before anyone else does.</p></div>
+  <div class="card tip"><p class="kicker">Trading</p><h3>Brokers from the inside</h3>
+   <p>MT4/MT5 real-time services, FIX connectivity to liquidity providers, dealing desk and risk tools, copy trading, multi-currency accounts and ledgers.</p></div>
+  <div class="card tip"><p class="kicker">Payments &amp; compliance</p><h3>Money in, money out</h3>
+   <p>Payment orchestration with routing and fallbacks, reconciliation, chargebacks and crypto. KYC and AML rules per country and per regulator.</p></div>
+  <div class="card tip"><p class="kicker">Front-end</p><h3>Screens people use all day</h3>
+   <p>My own UI framework in plain JavaScript, React, canvas charts, and mobile apps for iPhone and Android for the trading platform, the CRM and the client portal.</p></div>
+ </div>
+ <p class="note">AI where it helps: small self-hosted models that propose changes in a fixed format, and people who approve them. The system explains; the team decides.</p>
+</section>
+
+<!-- ============ SYSTEMS ============ -->
+<section id="systems">
+ <h2>Systems I've built</h2>
+ <p class="lead">Seven independent systems, built in my own time on top of 20+ years of experience. Each one designed, built and tested by me, and now moving to production servers. The first versions of the trading platform, the UI framework, the CRM and the client portal were presented to IronFX; the others followed along the way. The source code is private; the products are developed for commercial use.</p>
+
+ <div class="cards">
+  <article class="pcard">
+   <img src="img/trader.jpg" alt="Trading platform screen" loading="lazy">
+   <p class="origin">Since 2022 · first version presented to IronFX</p>
+   <h3>Trading platform</h3>
+   <p>A complete trading platform with its own engine instead of MetaTrader: web and mobile apps, a dealing desk for the broker, and connectivity to liquidity providers.</p>
+   <p class="tags"><span>Go</span><span>JavaScript</span><span>React</span><span>FIX</span><span>iOS &amp; Android</span></p>
+   <a class="more" href="https://george-cd.github.io/go-webtrader-showcase/" target="_blank" rel="noopener">Public showcase ↗</a>
+  </article>
+
+  <article class="pcard">
+   <img src="img/portal.jpg" alt="Client portal" loading="lazy">
+   <p class="origin">Since 2022 · first version presented to IronFX</p>
+   <h3>Broker CRM and client portal</h3>
+   <p>A back office that adapts to each broker's own structure of companies, brands and departments, with fine-grained access control, KYC, AML and partner programs. Plus a white-label client portal. Both run on my own UI framework, and each has its own mobile app.</p>
+   <p class="tags"><span>Go</span><span>PostgreSQL</span><span>JavaScript</span><span>My UI framework</span><span>iOS &amp; Android</span></p>
+  </article>
+
+  <article class="pcard">
+   <img src="img/payments.jpg" alt="Payment hub" loading="lazy">
+   <h3>Payment orchestration hub</h3>
+   <p>One hub between every product and every payment provider: routing and fallbacks, reconciliation, alerts and a secure cashier. New providers are added without new code. Its back office runs on my own UI framework.</p>
+   <p class="tags"><span>Go</span><span>PostgreSQL</span><span>My UI framework</span></p>
+  </article>
+
+  <article class="pcard">
+   <img src="img/broadcast.jpg" alt="Real-time operator workspace" loading="lazy">
+   <h3>Real-time broadcast server</h3>
+   <p>Streams live data to many thousands of users at once, for trading and iGaming, and flags bots and account farms with the evidence for the operator to decide.</p>
+   <p class="tags"><span>C++</span><span>Linux</span><span>WebSocket</span><span>TLS</span></p>
+  </article>
+
+  <article class="pcard">
+   <img src="img/security.jpg" alt="Security platform view" loading="lazy">
+   <h3>Multi-layer security platform</h3>
+   <p>A security base shared by every product, from the network card to the application, that learns each customer's normal traffic and explains every alert in plain words.</p>
+   <p class="tags"><span>C++</span><span>Go</span><span>Linux kernel</span><span>Machine learning</span></p>
+  </article>
+
+  <article class="pcard">
+   <img src="img/workspace.jpg" alt="UI framework workspace" loading="lazy">
+   <p class="origin">Since 2022 · first version presented to IronFX</p>
+   <h3>UI framework</h3>
+   <p>A framework for web applications that stay open all day: tabs like a desktop app, memory that cleans itself, and every request signed and checked. It powers the CRM, the client portal and the payment hub's back office.</p>
+   <p class="tags"><span>Go</span><span>JavaScript</span></p>
+   <a class="more" href="https://george-cd.github.io/customframework-showcase/" target="_blank" rel="noopener">Public showcase ↗</a>
+  </article>
+
+  <article class="pcard">
+   <img src="img/pentest.jpg" alt="Pen-test console" loading="lazy">
+   <h3>Pen-test and hardening toolkit</h3>
+   <p>My own toolkit with 180+ attacks and checks that tests every one of these systems and their Linux servers before they go live, locally and offline.</p>
+   <p class="tags"><span>Python</span><span>Linux</span><span>Security</span></p>
+  </article>
+ </div>
+</section>
+
+<!-- ============ HOW I WORK ============ -->
+<section id="how">
+ <h2>How I work</h2>
+ <div class="grid4">
+  <div class="card tip"><b>Simple, readable code</b><p>Code the next person can read and change without fear.</p></div>
+  <div class="card tip"><b>Tests before trust</b><p>Automated tests for every system, and the same test cases shared between languages.</p></div>
+  <div class="card tip"><b>Measured, not guessed</b><p>Nothing goes to production without being measured first.</p></div>
+  <div class="card tip"><b>Security by design</b><p>Security is the first layer of a system, not something added at the end.</p></div>
+ </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="about">
+ <h2>Experience</h2>
+ <div class="two">
+  <div>
+   <p class="lead">20+ years building software, most of it for trading and payments.</p>
+   <p>I like the hard parts: systems that must answer in real time, stay up, and stay safe. I lead a system from the first design to production, and I have run the technology behind sales, back office, funding and compliance teams.</p>
+  </div>
+  <ul class="timeline">
+   <li><b>Software Engineer</b> · Dynamic Works <small>2026 – now</small><span>Payment integrations, real-time chat, fintech and trading</span></li>
+   <li><b>Consultant, IT Technology &amp; Engineering</b> · IronFX <small>2026 – now</small></li>
+   <li><b>Head of CRM Systems</b> · IronFX <small>2016 – 2026</small><span>CRM architecture, real-time MT5 services, team lead</span></li>
+   <li><b>Linux, networks and security</b> <small>16+ years</small><span>Servers, networking, penetration testing, reverse engineering</span></li>
+   <li><b>Independent projects</b> <small>2022 – now</small><span>Seven systems in Go, C++ and Python, built in my own time</span></li>
+   <li><b>BSc Computer Science</b> · Frederick University</li>
+  </ul>
+ </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+ <div class="card contact">
+  <h2>Get in touch</h2>
+  <p class="lead">Open to senior Go, C++, Linux and platform engineering roles, remote.</p>
+  <p class="cta">
+   <a class="btn" href="mailto:drakou.george@gmail.com">drakou.george@gmail.com</a>
+   <a class="btn ghost" href="https://www.linkedin.com/in/george-drakou-982a76421" target="_blank" rel="noopener">LinkedIn</a>
+  </p>
+ </div>
+</section>
+
+</main>
+
+<footer>© 2026 George Drakou · Source code is private</footer>
+</body>
+</html>

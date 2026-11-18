@@ -1,0 +1,119 @@
+/* George Drakou — portfolio. Same dark colours as the Shield page, so the demo fits in. No libraries. */
+:root{
+ --bg:#070b14; --card:#0d1422; --card2:#0a101b; --line:#1c2a40;
+ --cy:#38d6ff; --ok:#3ddc97; --warn:#ffb547; --bad:#ff5470;
+ --dim:#8a9bb5; --tx:#e6edf7;
+ --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--cy)}
+main,.hero{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:56px 0 8px;scroll-margin-top:64px}
+h1,h2,h3{line-height:1.2;margin:0 0 12px}
+h2{font-size:28px}
+h3{font-size:20px}
+p{margin:0 0 12px}
+.muted{color:var(--dim)}
+.lead{font-size:18px;color:#c9d5e6}
+.kicker,.eyebrow{font:12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--cy);margin-bottom:8px}
+
+/* ---- top bar ---- */
+nav.top{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:16px;
+ padding:10px 20px;background:rgba(7,11,20,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.brand{color:var(--tx);font-weight:700;text-decoration:none}
+nav .links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+nav .links a{color:var(--dim);text-decoration:none;font-size:14px}
+nav .links a:hover{color:var(--tx)}
+nav .links a.btn{color:#04121b}
+
+/* ---- buttons ---- */
+.btn{display:inline-block;padding:11px 20px;border-radius:999px;background:var(--cy);color:#04121b;font-weight:600;
+ text-decoration:none;border:1px solid var(--cy)}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{background:transparent;color:var(--cy)}
+.btn.small{padding:6px 14px;font-size:14px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+
+/* ---- hero ---- */
+.hero{padding-top:96px;padding-bottom:40px}
+.hero h1{font-size:clamp(32px,5vw,54px);letter-spacing:-.01em}
+.hero h1 span{color:var(--cy)}
+.stack{font:15px var(--mono);color:var(--dim)}
+
+/* ---- cards ---- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px}
+.message .big{font-size:clamp(20px,2.6vw,28px);font-weight:600;max-width:900px}
+.pills{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.pills div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.pills b{display:block;color:var(--cy)}
+.pills small{color:var(--dim);font-size:14px}
+
+/* ---- two columns ---- */
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:start}
+.facts{list-style:none;padding:0;margin:16px 0}
+.facts li{padding:10px 14px;margin-bottom:8px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--ok);border-radius:8px}
+.facts b{color:var(--ok);font-family:var(--mono)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font:12px var(--mono);padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--dim)}
+.shot{margin:0}
+.shot img{width:100%;border-radius:12px;border:1px solid var(--line);display:block}
+.shot figcaption{font-size:13px;color:var(--dim);margin-top:6px}
+
+/* ---- product cards ---- */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;scroll-margin-top:72px}
+.pcard .tags{margin:auto 0 14px}
+.pcard .btn{align-self:flex-start}
+.soon{font:12px var(--mono);color:var(--dim);border:1px dashed var(--line);border-radius:8px;padding:8px 12px;margin:0}
+
+/* ---- framework band ---- */
+.band{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px;flex-wrap:wrap}
+.band p{max-width:640px;color:#c9d5e6}
+
+/* ---- how I work ---- */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tip{padding:18px}
+.tip b{display:block;margin-bottom:6px}
+.tip p{color:var(--dim);font-size:15px;margin:0}
+
+/* ---- about ---- */
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 18px 20px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--cy)}
+.timeline small{display:block;font:12px var(--mono);color:var(--dim)}
+.timeline span{display:block;color:var(--dim);font-size:14px}
+
+/* ---- contact ---- */
+.contact{padding:32px;margin-bottom:56px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid3 p{color:var(--dim);font-size:15px;margin:0}
+
+footer{text-align:center;color:var(--dim);font-size:13px;padding:24px;border-top:1px solid var(--line)}
+
+
+/* ---- numbers strip ---- */
+.numbers{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;padding-top:8px}
+.numbers div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.numbers b{display:block;font:700 30px var(--mono);color:var(--cy)}
+.numbers span{color:var(--dim);font-size:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tip h3{font-size:18px;margin-bottom:8px}
+.tip .kicker{margin-bottom:4px}
+.note{color:var(--dim);font-size:15px;margin-top:16px}
+.pcard img{width:calc(100% + 44px);margin:-22px -22px 16px;height:180px;object-fit:cover;object-position:top left;border-radius:14px 14px 0 0;border-bottom:1px solid var(--line)}
+.pcard .more{font-size:14px;text-decoration:none}
+.cards{grid-template-columns:repeat(auto-fill,minmax(330px,1fr))!important}
+@media (max-width:860px){ .numbers{grid-template-columns:repeat(2,1fr)} .grid3{grid-template-columns:1fr} }
+
+.origin{font:11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--amber);margin:0 0 6px}
+
+/* ---- mobile ---- */
+@media (max-width:860px){
+ .pills,.grid4{grid-template-columns:repeat(2,1fr)}
+ .two,.cards,.grid3{grid-template-columns:1fr}
+ nav .links a:not(.btn){display:none}
+}
+@media (max-width:480px){ .pills,.grid4{grid-template-columns:1fr} }
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
