@@ -4,8 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>George Drakou — Senior Platform Engineer</title>
-<meta name="description" content="George Drakou designs and builds large real-time systems end to end: Go, C++, Linux, security, trading and payments.">
-<link rel="icon" href="data:,">
+<meta name="description" content="George Drakou, Senior Platform Engineer in Cyprus. I design and build large real-time systems end to end: C++ and Go on Linux, security, trading and payments.">
+<link rel="canonical" href="https://george-cd.github.io/">
+<!-- social preview: what LinkedIn, Slack and others show when the link is shared -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://george-cd.github.io/">
+<meta property="og:title" content="George Drakou — Senior Platform Engineer">
+<meta property="og:description" content="I design and build large real-time systems end to end: C++ and Go on Linux, security, trading and payments.">
+<meta property="og:image" content="https://george-cd.github.io/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -28,8 +36,8 @@
 <header class="hero" id="top">
  <p class="eyebrow">Senior Platform Engineer · Nicosia, Cyprus · Remote</p>
  <h1>I design and build large real-time systems,<br><span>end to end.</span></h1>
- <p class="lead">From the Linux kernel and the network to the database, the business logic and the screen people use all day. Go, C++ and Linux, with security built in from the first line.</p>
- <p class="stack">Go · C++ · Linux · Security · Trading · Payments · PostgreSQL · JavaScript</p>
+ <p class="lead">From the Linux kernel and the network to the trading engine, the database, the business logic and the screens people use all day. C++ and Go on Linux, with security built in from the first line.</p>
+ <p class="stack">C++ · Go · Linux · Security · Trading · Payments · PostgreSQL · JavaScript</p>
  <p class="cta">
   <a class="btn" href="#systems">See what I've built</a>
   <a class="btn ghost" href="#contact">Get in touch</a>
@@ -43,7 +51,7 @@
  <div><b>20+</b><span>years building software</span></div>
  <div><b>10</b><span>years as Head of CRM Systems at a global forex broker</span></div>
  <div><b>7</b><span>large systems designed and built end to end</span></div>
- <div><b>1,300+</b><span>automated tests across those systems</span></div>
+ <div><b>1,700+</b><span>automated tests across those systems</span></div>
  <div><b>200+</b><span>payment provider integrations</span></div>
 </section>
 
@@ -51,16 +59,16 @@
 <section id="skills">
  <h2>What I do</h2>
  <div class="grid3">
-  <div class="card tip"><p class="kicker">Go</p><h3>Back-ends that handle money</h3>
-   <p>A trading engine with real-time margin and stop-out, a payment hub, a broker CRM and a client portal. Exact money maths, full audit trails, safe retries, crash-safe records.</p></div>
   <div class="card tip"><p class="kicker">C++ on Linux</p><h3>Real-time and low level</h3>
-   <p>A real-time server that streams live data to many thousands of users, and a security engine that works down to packet filtering inside the Linux kernel. Plain, readable C++ with no heavy dependencies.</p></div>
+   <p>A trading engine that handles an order in about 5 microseconds, a price server that held 100,000 live connections on a 2-core test server, a real-time broadcast server, and a security engine that filters packets inside the Linux kernel. Plain, readable C++ with no heavy dependencies.</p></div>
+  <div class="card tip"><p class="kicker">Go</p><h3>Back-ends that handle money</h3>
+   <p>The trading platform's server, a payment hub, a broker CRM and a client portal. Exact money maths, full audit trails, safe retries, crash-safe records, and APIs that connect all of them.</p></div>
   <div class="card tip"><p class="kicker">Security</p><h3>Defence in depth</h3>
-   <p>Protection from the network card to the application, its own machine-learning model per customer, signed live updates. I attack my own systems with my own pen-test toolkit and fuzzers before anyone else does.</p></div>
+   <p>Protection from the network card to the application: AI-bot and scraper detection, honeypots, fraud signals, its own machine-learning model per customer, and signed live updates. I attack my own systems with my own pen-test toolkit and fuzzers before anyone else does.</p></div>
   <div class="card tip"><p class="kicker">Trading</p><h3>Brokers from the inside</h3>
-   <p>MT4/MT5 real-time services, FIX connectivity to liquidity providers, dealing desk and risk tools, copy trading, multi-currency accounts and ledgers.</p></div>
+   <p>MT4/MT5 real-time services, FIX connectivity to liquidity providers, dealing desk and risk tools, copy trading, PAMM and MAM accounts with high-water-mark fees, multi-currency accounts and ledgers.</p></div>
   <div class="card tip"><p class="kicker">Payments &amp; compliance</p><h3>Money in, money out</h3>
-   <p>Payment orchestration with routing and fallbacks, reconciliation, chargebacks and crypto. KYC and AML rules per country and per regulator.</p></div>
+   <p>Payment orchestration with routing and fallbacks, reconciliation, chargebacks, crypto and fraud checks. Providers integrated straight from their official docs. KYC and AML rules per country and per regulator.</p></div>
   <div class="card tip"><p class="kicker">Front-end</p><h3>Screens people use all day</h3>
    <p>My own UI framework in plain JavaScript, React, canvas charts, and mobile apps for iPhone and Android for the trading platform, the CRM and the client portal.</p></div>
  </div>
@@ -77,8 +85,8 @@
    <img src="img/trader.jpg" alt="Trading platform screen" loading="lazy">
    <p class="origin">Since 2022 · first version presented to IronFX</p>
    <h3>Trading platform</h3>
-   <p>A complete trading platform with its own engine instead of MetaTrader: web and mobile apps, a dealing desk for the broker, and connectivity to liquidity providers.</p>
-   <p class="tags"><span>Go</span><span>JavaScript</span><span>React</span><span>FIX</span><span>iOS &amp; Android</span></p>
+   <p>A complete trading platform with its own engine instead of MetaTrader. The engine is written in C++ and handles an order in about 5 microseconds, measured with a million orders on a 2-core test server. Web and mobile apps, copy trading, PAMM and MAM, a dealing desk for the broker, and connectivity to liquidity providers.</p>
+   <p class="tags"><span>C++</span><span>Go</span><span>JavaScript</span><span>React</span><span>FIX</span><span>iOS &amp; Android</span></p>
    <a class="more" href="https://george-cd.github.io/go-webtrader-showcase/" target="_blank" rel="noopener">Public showcase ↗</a>
   </article>
 
@@ -93,21 +101,21 @@
   <article class="pcard">
    <img src="img/payments.jpg" alt="Payment hub" loading="lazy">
    <h3>Payment orchestration hub</h3>
-   <p>One hub between every product and every payment provider: routing and fallbacks, reconciliation, alerts and a secure cashier. New providers are added without new code. Its back office runs on my own UI framework.</p>
+   <p>One hub between every product and every payment provider: routing and fallbacks, reconciliation, fraud checks, alerts and a secure cashier. New providers are added as configuration, not code, straight from their official docs (Checkout.com, Nuvei, Praxis, Trustly and more), and tested against a built-in provider emulator before going live. Its back office runs on my own UI framework.</p>
    <p class="tags"><span>Go</span><span>PostgreSQL</span><span>My UI framework</span></p>
   </article>
 
   <article class="pcard">
    <img src="img/broadcast.jpg" alt="Real-time operator workspace" loading="lazy">
    <h3>Real-time broadcast server</h3>
-   <p>Streams live data to many thousands of users at once, for trading and iGaming, and flags bots and account farms with the evidence for the operator to decide.</p>
+   <p>Streams live data to many thousands of users at once, for trading and iGaming, and flags bots and account farms with the evidence for the operator to decide. Client libraries in C++, Python, Go and JavaScript.</p>
    <p class="tags"><span>C++</span><span>Linux</span><span>WebSocket</span><span>TLS</span></p>
   </article>
 
   <article class="pcard">
    <img src="img/security.jpg" alt="Security platform view" loading="lazy">
    <h3>Multi-layer security platform</h3>
-   <p>A security base shared by every product, from the network card to the application, that learns each customer's normal traffic and explains every alert in plain words.</p>
+   <p>A security base shared by every product, from the network card to the application. It learns each customer's normal traffic, catches AI bots, scrapers and fake crawlers, and explains every alert in plain words. Threats mapped to MITRE ATT&amp;CK.</p>
    <p class="tags"><span>C++</span><span>Go</span><span>Linux kernel</span><span>Machine learning</span></p>
   </article>
 
@@ -115,7 +123,7 @@
    <img src="img/workspace.jpg" alt="UI framework workspace" loading="lazy">
    <p class="origin">Since 2022 · first version presented to IronFX</p>
    <h3>UI framework</h3>
-   <p>A framework for web applications that stay open all day: tabs like a desktop app, memory that cleans itself, and every request signed and checked. It powers the CRM, the client portal and the payment hub's back office.</p>
+   <p>A framework for web applications that stay open all day: tabs like a desktop app, memory that cleans itself, every request signed and checked, and permission rules that can depend on the network and the time of day. It powers the CRM, the client portal and the payment hub's back office.</p>
    <p class="tags"><span>Go</span><span>JavaScript</span></p>
    <a class="more" href="https://george-cd.github.io/customframework-showcase/" target="_blank" rel="noopener">Public showcase ↗</a>
   </article>
@@ -163,7 +171,7 @@
 <section id="contact">
  <div class="card contact">
   <h2>Get in touch</h2>
-  <p class="lead">Open to senior Go, C++, Linux and platform engineering roles, remote.</p>
+  <p class="lead">Open to senior C++, Go, Linux and platform engineering roles, remote.</p>
   <p class="cta">
    <a class="btn" href="mailto:drakou.george@gmail.com">drakou.george@gmail.com</a>
    <a class="btn ghost" href="https://www.linkedin.com/in/george-drakou-982a76421" target="_blank" rel="noopener">LinkedIn</a>
