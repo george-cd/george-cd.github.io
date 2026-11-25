@@ -50,7 +50,7 @@
 <section class="numbers">
  <div><b>20+</b><span>years building software</span></div>
  <div><b>10</b><span>years as Head of CRM Systems at a global forex broker</span></div>
- <div><b>7</b><span>large systems designed and built end to end</span></div>
+ <div><b>8</b><span>large systems designed and built end to end</span></div>
  <div><b>1,700+</b><span>automated tests across those systems</span></div>
  <div><b>200+</b><span>payment provider integrations</span></div>
 </section>
@@ -78,7 +78,7 @@
 <!-- ============ SYSTEMS ============ -->
 <section id="systems">
  <h2>Systems I've built</h2>
- <p class="lead">Seven independent systems, built in my own time on top of 20+ years of experience. Each one designed, built and tested by me, and now moving to production servers. The first versions of the trading platform, the UI framework, the CRM and the client portal were presented to IronFX; the others followed along the way. The source code is private; the products are developed for commercial use.</p>
+ <p class="lead">Eight independent systems, built in my own time on top of 20+ years of experience. Each one designed, built and tested by me, and now moving to production servers. The first versions of the trading platform, the UI framework, the CRM and the client portal were presented to IronFX; the others followed along the way. The source code is private; the products are developed for commercial use.</p>
 
  <div class="cards">
   <article class="pcard">
@@ -91,11 +91,23 @@
   </article>
 
   <article class="pcard">
-   <img src="img/crm.jpg" alt="CRM: a rule written in plain words, turned into a flowchart by the AI and waiting for a person to check it" loading="lazy">
+   <img src="img/crm.jpg" alt="CRM: the AI assistant turns one sentence about a staff move into a four-step proposal (role, assignment, approval limit, access window) that waits for Apply" loading="lazy">
    <p class="origin">Since 2022 · first version presented to IronFX</p>
-   <h3>AI-native broker CRM and client portal</h3>
-   <p><b>The CRM you build by talking to it.</b> Describe a module, an access rule, a report or a compliance check in plain words: the AI drafts it and measures the impact, a person approves it, and it never sees client data. One sentence like “Kostas moves to Funding: withdrawals of one brand only, approvals up to 1,000 USD, only from the office” becomes a ready role, assignment, approval limit and access window. Underneath, access control built for real brokers (companies, brands, departments, record sharing, break-glass, reveal with a reason, database-level row security), with KYC, AML and partner programs. Plus a white-label client portal, both with their own mobile apps.</p>
+   <h3>AI-native broker CRM</h3>
+   <p><b>The CRM you build by talking to it.</b> A manager writes what they want in plain words, and the AI turns it into a proposal: a new module, an access rule, a report or a compliance check. It shows what would change and how many records are affected, and nothing is applied until a person presses Apply. The AI never sees client data.</p>
+   <p>In the picture: “Kostas moves to Funding: withdrawals of one brand only, approvals up to 1,000 USD, only from the office” becomes four ready steps: a new role, the assignment, an approval limit and an access window.</p>
+   <p>Underneath is the full back office of a broker: leads and clients, KYC review, AML checks per regulator, partner (IB) trees and commissions, client wallets, reports, calls and campaigns. Access control is built for real brokers: companies, brands, departments, record sharing, emergency access, revealing a hidden field only with a reason, and row-level security inside the database. Its own mobile app.</p>
    <p class="tags"><span>Go</span><span>PostgreSQL</span><span>AI: self-hosted + Claude</span><span>JavaScript</span><span>My UI framework</span><span>iOS &amp; Android</span></p>
+  </article>
+
+  <article class="pcard">
+   <img src="img/portal.jpg" alt="Client portal: the same home screen in two brands, one light and one dark, with the phone version on top" loading="lazy">
+   <p class="origin">Since 2022 · first version presented to IronFX</p>
+   <h3>White-label client portal</h3>
+   <p><b>One portal, many brands.</b> The broker's clients sign up, verify their identity, open trading accounts and move money. A new brand is added with one file: its own domain, logo, colours, font, languages, legal text and email sender. Logins are separate per brand, so a session from one brand never works on another.</p>
+   <p>Clients see a step-by-step progress bar from sign-up to first deposit, upload KYC documents (stored encrypted in the CRM, never in the portal), and deposit or withdraw through the payment hub. Every withdrawal asks for two-factor authentication again. Partners (IBs) get their own area: earnings, a “Why?” explanation for every commission, their sub-partner tree and a funnel from click to first deposit.</p>
+   <p>The portal decides nothing on its own: the CRM says what is allowed, and the portal shows it. Same code on desktop and phone, plus its own mobile app.</p>
+   <p class="tags"><span>Go</span><span>PostgreSQL</span><span>JavaScript</span><span>My UI framework</span><span>iOS &amp; Android</span></p>
   </article>
 
   <article class="pcard">
@@ -161,7 +173,7 @@
    <li><b>Consultant, IT Technology &amp; Engineering</b> · IronFX <small>2026 – now</small></li>
    <li><b>Head of CRM Systems</b> · IronFX <small>2016 – 2026</small><span>CRM architecture, real-time MT5 services, team lead</span></li>
    <li><b>Linux, networks and security</b> <small>16+ years</small><span>Servers, networking, penetration testing, reverse engineering</span></li>
-   <li><b>Independent projects</b> <small>2022 – now</small><span>Seven systems in Go, C++ and Python, built in my own time</span></li>
+   <li><b>Independent projects</b> <small>2022 – now</small><span>Eight systems in Go, C++ and Python, built in my own time</span></li>
    <li><b>BSc Computer Science</b> · Frederick University</li>
   </ul>
  </div>
