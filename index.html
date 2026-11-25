@@ -60,9 +60,9 @@
  <h2>What I do</h2>
  <div class="grid3">
   <div class="card tip"><p class="kicker">C++ on Linux</p><h3>Real-time and low level</h3>
-   <p>A trading engine that handles an order in about 5 microseconds, a price server that held 100,000 live connections on a 2-core test server, a real-time broadcast server, and a security engine that filters packets inside the Linux kernel. Plain, readable C++ with no heavy dependencies.</p></div>
+   <p>The core engine of a trading platform: about a microsecond per price, and 325,000 prices a second with 102,000 accounts and every feature on. A price server that held 100,000 live connections, a real-time broadcast server, and a security engine that filters packets inside the Linux kernel. Plain, readable C++ with no heavy dependencies.</p></div>
   <div class="card tip"><p class="kicker">Go</p><h3>Back-ends that handle money</h3>
-   <p>The trading platform's server, a payment hub, a broker CRM and a client portal. Exact money maths, full audit trails, safe retries, crash-safe records, and APIs that connect all of them.</p></div>
+   <p>Everything around the trading core: the API, sign-in, the dealing desk, the back office and the integrations. Plus a payment hub, a broker CRM and a client portal. Exact money maths, full audit trails, safe retries, crash-safe records.</p></div>
   <div class="card tip"><p class="kicker">Security</p><h3>Defence in depth</h3>
    <p>Protection from the network card to the application: AI-bot and scraper detection, honeypots, fraud signals, its own machine-learning model per customer, and signed live updates. I attack my own systems with my own pen-test toolkit and fuzzers before anyone else does.</p></div>
   <div class="card tip"><p class="kicker">Trading</p><h3>Brokers from the inside</h3>
@@ -85,7 +85,7 @@
    <img src="img/trader.jpg" alt="Trading platform screen" loading="lazy">
    <p class="origin">Since 2022 · first version presented to IronFX</p>
    <h3>Trading platform</h3>
-   <p>A complete trading platform with its own engine instead of MetaTrader. The engine is written in C++ and handles an order in about 5 microseconds, measured with a million orders on a 2-core test server. Web and mobile apps, copy trading, PAMM and MAM, a dealing desk for the broker, and connectivity to liquidity providers.</p>
+   <p>A complete trading platform with its own engine instead of MetaTrader. <b>The core is written in C++</b>: prices, orders, margin, stop-outs and the accounts' money, at about a microsecond per price (median, 100,000 accounts) and 325,000 prices a second with every feature on. <b>Everything around it is in Go</b>: the API, sign-in, the dealing desk, the back office and the integrations. Load-tested with 10,000 simulated users on one small machine. Web and mobile apps, copy trading, PAMM and MAM, prop challenges, and connectivity to liquidity providers.</p>
    <p class="tags"><span>C++</span><span>Go</span><span>JavaScript</span><span>React</span><span>FIX</span><span>iOS &amp; Android</span></p>
    <a class="more" href="https://george-cd.github.io/go-webtrader-showcase/" target="_blank" rel="noopener">Public showcase ↗</a>
   </article>
