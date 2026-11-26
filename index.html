@@ -141,10 +141,17 @@
   </article>
 
   <article class="pcard">
-   <img src="img/pentest.jpg" alt="Pen-test console" loading="lazy">
+   <img src="img/pentest.jpg" alt="Pen-test console: attacks grouped by system, each with a pass or fail result" loading="lazy">
    <h3>Pen-test and hardening toolkit</h3>
-   <p>My own toolkit with 180+ attacks and checks that tests every one of these systems and their Linux servers before they go live, locally and offline.</p>
-   <p class="tags"><span>Python</span><span>Linux</span><span>Security</span></p>
+   <p><b>I attack my own systems before anyone else does.</b> My own toolkit with 180+ attacks and checks, run against every one of these systems and their Linux servers before they go live. It works fully offline, from a web console or the command line, and gives a clear pass or fail for every defence.</p>
+   <ul class="mini">
+    <li><b>Python:</b> the engine and most of the checks: request tampering, replay, stolen sessions, brute force, forged payment callbacks, TLS and security headers, plus cloud, mobile app, Windows and router audits.</li>
+    <li><b>C:</b> low-level attacks that need raw speed: a fast multithreaded port scanner, connection exhaustion, slow-header attacks and HTTP/2 Rapid Reset (CVE-2023-44487).</li>
+    <li><b>C++ and Go:</b> coverage-guided fuzzers with AddressSanitizer that feed millions of broken inputs to the parsers to find memory bugs.</li>
+    <li><b>Linux:</b> a read-only audit of a production server: SSH, firewall, kernel settings, patching, accounts, file permissions, AppArmor and audit rules.</li>
+    <li>It also drives well-known tools (sqlmap, Metasploit, Scapy, ssh-audit, Valgrind, static analysis) and reads their results into the same report.</li>
+   </ul>
+   <p class="tags"><span>Python</span><span>C</span><span>C++</span><span>Go</span><span>JavaScript</span><span>Linux</span><span>Security</span></p>
   </article>
  </div>
 </section>
@@ -173,7 +180,7 @@
    <li><b>Consultant, IT Technology &amp; Engineering</b> · IronFX <small>2026 – now</small></li>
    <li><b>Head of CRM Systems</b> · IronFX <small>2016 – 2026</small><span>CRM architecture, real-time MT5 services, team lead</span></li>
    <li><b>Linux, networks and security</b> <small>16+ years</small><span>Servers, networking, penetration testing, reverse engineering</span></li>
-   <li><b>Independent projects</b> <small>2022 – now</small><span>Eight systems in Go, C++ and Python, built in my own time</span></li>
+   <li><b>Independent projects</b> <small>2022 – now</small><span>Eight systems in C++, Go, C and Python, built in my own time</span></li>
    <li><b>BSc Computer Science</b> · Frederick University</li>
   </ul>
  </div>

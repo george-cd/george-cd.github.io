@@ -136,3 +136,6 @@ footer{text-align:center;color:var(--dim);font-size:13px;padding:24px;border-top
 }
 @media (max-width:480px){ .pills,.grid4{grid-template-columns:1fr} }
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+#systems .pcard ul.mini{margin:0 0 12px;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+#systems .pcard ul.mini li{color:var(--dim);line-height:1.55}
+#systems .pcard ul.mini b{color:var(--tx)}
