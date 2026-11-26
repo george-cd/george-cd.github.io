@@ -85,7 +85,8 @@
    <img src="img/trader.jpg" alt="Trading platform screen" loading="lazy">
    <p class="origin">Since 2022 · first version presented to IronFX</p>
    <h3>Trading platform</h3>
-   <p>A complete trading platform with its own engine instead of MetaTrader. <b>The core is written in C++</b>: prices, orders, margin, stop-outs and the accounts' money, at about a microsecond per price (median, 100,000 accounts) and 325,000 prices a second with every feature on. <b>Everything around it is in Go</b>: the API, sign-in, the dealing desk, the back office and the integrations. Load-tested with 10,000 simulated users on one small machine. Web and mobile apps, copy trading, PAMM and MAM, prop challenges, and connectivity to liquidity providers.</p>
+   <p>A complete trading platform with its own engine instead of MetaTrader. <b>The core is written in C++</b>: prices, orders, margin, stop-outs and the accounts' money, at about a microsecond per price (median, 100,000 accounts) and 325,000 prices a second with every feature on. <b>Everything around it is in Go</b>: the API, sign-in, the dealing desk, the back office and the integrations. Load-tested with 10,000 simulated users on one small machine.</p>
+   <p>For the broker: a live dealing desk (exposure per currency, top clients, result per symbol, sudden price jumps), PAMM and MAM with performance fees on a high-water mark, copy trading, prop challenges, connectivity to liquidity providers, and a live feed to the CRM like the one brokers know from MT4/MT5. For the trader: web and mobile apps per broker, with push notifications, fingerprint or face unlock, and orders placed by voice.</p>
    <p class="tags"><span>C++</span><span>Go</span><span>JavaScript</span><span>React</span><span>FIX</span><span>iOS &amp; Android</span></p>
    <a class="more" href="https://george-cd.github.io/go-webtrader-showcase/" target="_blank" rel="noopener">Public showcase ↗</a>
   </article>
@@ -96,7 +97,7 @@
    <h3>AI-native broker CRM</h3>
    <p><b>The CRM you build by talking to it.</b> A manager writes what they want in plain words, and the AI turns it into a proposal: a new module, an access rule, a report or a compliance check. It shows what would change and how many records are affected, and nothing is applied until a person presses Apply. The AI never sees client data.</p>
    <p>In the picture: “Kostas moves to Funding: withdrawals of one brand only, approvals up to 1,000 USD, only from the office” becomes four ready steps: a new role, the assignment, an approval limit and an access window.</p>
-   <p>Underneath is the full back office of a broker: leads and clients, KYC review, AML checks per regulator, partner (IB) trees and commissions, client wallets, reports, calls and campaigns. Access control is built for real brokers: companies, brands, departments, record sharing, emergency access, revealing a hidden field only with a reason, and row-level security inside the database. Its own mobile app.</p>
+   <p>Underneath is the full back office of a broker: leads and clients with a 360° view, KYC review, AML checks per regulator, partner (IB) agreements with a “what if” simulator, client wallets, reports in one currency, and calls with speech-to-text so compliance can check what was said. A payment policy per brand decides every deposit and withdrawal, with a simulator to try it first. Trades arrive from the trading platform every minute. Access control is built for real brokers: companies, brands, departments, record sharing, emergency access, revealing a hidden field only with a reason, and row-level security inside the database. Its own mobile app.</p>
    <p class="tags"><span>Go</span><span>PostgreSQL</span><span>AI: self-hosted + Claude</span><span>JavaScript</span><span>My UI framework</span><span>iOS &amp; Android</span></p>
   </article>
 
@@ -105,7 +106,7 @@
    <p class="origin">Since 2022 · first version presented to IronFX</p>
    <h3>White-label client portal</h3>
    <p><b>One portal, many brands.</b> The broker's clients sign up, verify their identity, open trading accounts and move money. A new brand is added with one file: its own domain, logo, colours, font, languages, legal text and email sender. Logins are separate per brand, so a session from one brand never works on another.</p>
-   <p>Clients see a step-by-step progress bar from sign-up to first deposit, upload KYC documents (stored encrypted in the CRM, never in the portal), and deposit or withdraw through the payment hub. Every withdrawal asks for two-factor authentication again. Partners (IBs) get their own area: earnings, a “Why?” explanation for every commission, their sub-partner tree and a funnel from click to first deposit.</p>
+   <p>Clients see a step-by-step progress bar from sign-up to first deposit, upload KYC documents (stored encrypted in the CRM, never in the portal), and deposit or withdraw through the payment hub. Before a withdrawal they see exactly how much they can take out, and every withdrawal asks for two-factor authentication again. Partners (IBs) get their own area: their agreements, earnings, a “Why?” explanation for every commission, a payout request, their sub-partner tree and a funnel from click to first deposit. Every sign-in is also reported to the security platform, so stolen or shared accounts stand out.</p>
    <p>The portal decides nothing on its own: the CRM says what is allowed, and the portal shows it. Same code on desktop and phone, plus its own mobile app.</p>
    <p class="tags"><span>Go</span><span>PostgreSQL</span><span>JavaScript</span><span>My UI framework</span><span>iOS &amp; Android</span></p>
   </article>
@@ -113,29 +114,34 @@
   <article class="pcard">
    <img src="img/payments.jpg" alt="Payment hub" loading="lazy">
    <h3>Payment orchestration hub</h3>
-   <p>One hub between every product and every payment provider: routing and fallbacks, reconciliation, fraud checks, alerts and a secure cashier. New providers are added as configuration, not code, straight from their official docs (Checkout.com, Nuvei, Praxis, Trustly and more), and tested against a built-in provider emulator before going live. Its back office runs on my own UI framework.</p>
-   <p class="tags"><span>Go</span><span>PostgreSQL</span><span>My UI framework</span></p>
+   <p><b>One hub between every product and every payment provider.</b> Routing and fallbacks when a provider is down, reconciliation, fraud checks, alerts and a secure cashier. Providers are added as configuration, not code, straight from their official docs: the engine covers all 214 providers in its catalogue this way (Checkout.com, Nuvei, Praxis, Trustly and more), including XML/SOAP, encrypted payloads, signed requests and two-way certificates. Every new provider is tested against a built-in emulator before going live.</p>
+   <p>It protects money where integrations usually fail: the same request is never paid out twice, an unclear answer from a provider goes to a person instead of being marked as failed, and the CRM gets signed notifications. The back office is in English and Greek and runs on my own UI framework.</p>
+   <p class="tags"><span>Go</span><span>PostgreSQL</span><span>JavaScript</span><span>My UI framework</span></p>
   </article>
 
   <article class="pcard">
    <img src="img/broadcast.jpg" alt="Real-time operator workspace" loading="lazy">
    <h3>Real-time broadcast server</h3>
-   <p>Streams live data to many thousands of users at once, for trading and iGaming, and flags bots and account farms with the evidence for the operator to decide. Client libraries in C++, Python, Go and JavaScript.</p>
-   <p class="tags"><span>C++</span><span>Linux</span><span>WebSocket</span><span>TLS</span></p>
+   <p><b>Live data to many thousands of users at once</b>, for trading platforms and iGaming: prices, odds, account numbers. A user who drops for a moment gets back what they missed; a slow phone gets the latest value instead of a backlog. It sends only what someone is actually watching, so the trading platform pushes a person's numbers only while their page is open.</p>
+   <p>It also watches behaviour and flags bots and account farms (robot-like timing, shared accounts, known AI crawlers, fake crawlers, bait channels that no real app touches) with the evidence for the operator to decide. It never blocks a player by itself. Operators get cases, team notes, shift handover and an optional AI assistant that explains each case in plain words.</p>
+   <p>Tested with 19,000 live connections on a small test server, about a microsecond per delivered message under heavy load, and hardened with sanitizers, fuzzing and its own pen tests. Client libraries in C++, Python, Go and JavaScript.</p>
+   <p class="tags"><span>C++</span><span>Linux</span><span>WebSocket</span><span>TLS</span><span>Python</span><span>Go</span><span>JavaScript</span></p>
   </article>
 
   <article class="pcard">
    <img src="img/security.jpg" alt="Security platform view" loading="lazy">
    <h3>Multi-layer security platform</h3>
-   <p>A security base shared by every product, from the network card to the application. It learns each customer's normal traffic, catches AI bots, scrapers and fake crawlers, and explains every alert in plain words. Threats mapped to MITRE ATT&amp;CK.</p>
-   <p class="tags"><span>C++</span><span>Go</span><span>Linux kernel</span><span>Machine learning</span></p>
+   <p><b>A security base shared by every product</b>, in eight layers from the network card to the user's behaviour, with a live view of where traffic passes and where each attack is stopped. Floods are dropped at the network card before they reach the application; the rest is checked for origin, connection, message, identity and behaviour.</p>
+   <p>It learns each customer's normal traffic with its own model per customer, catches AI bots, scrapers and fake crawlers, sets honeypots, follows fraud signals, and explains every alert in plain words. Rules and models are updated live, signed, without a restart. Threats are mapped to MITRE ATT&amp;CK, and the same protection is rolled out to the trading platform, the CRM and the broadcast server.</p>
+   <p class="tags"><span>C++</span><span>Go</span><span>Python</span><span>Linux kernel</span><span>Machine learning</span><span>MITRE ATT&amp;CK</span></p>
   </article>
 
   <article class="pcard">
    <img src="img/workspace.jpg" alt="UI framework workspace" loading="lazy">
    <p class="origin">Since 2022 · first version presented to IronFX</p>
    <h3>UI framework</h3>
-   <p>A framework for web applications that stay open all day: tabs like a desktop app, memory that cleans itself, every request signed and checked, and permission rules that can depend on the network and the time of day. It powers the CRM, the client portal and the payment hub's back office.</p>
+   <p>A framework for web applications that stay open all day: tabs like a desktop app, memory that cleans itself, and every request signed and checked before it reaches the application. Permission rules can depend on the network and the time of day, and a route without a permission stops the server from starting.</p>
+   <p>Built in: sign-in with two-factor authentication, sessions you can revoke, a theme and languages per application, and public pages. It is fuzz-tested and checked for known vulnerabilities on every change. It powers the CRM, the client portal and the payment hub's back office.</p>
    <p class="tags"><span>Go</span><span>JavaScript</span></p>
    <a class="more" href="https://george-cd.github.io/customframework-showcase/" target="_blank" rel="noopener">Public showcase ↗</a>
   </article>
